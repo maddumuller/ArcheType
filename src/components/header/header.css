@@ -3,21 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* verificar tom de cor dps */
+
 .header {
     width: 100%;
-    background-color: #1f7079; 
-    padding: 12px 30px;
-
+    background: linear-gradient(180deg, #0B5961 0%, #2A9CA8 100%);
+    padding: 5px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .logo img {
-    height: 45px;  
+    height: 80px;  
+    margin-left: 0px;
+
 }
 
 .menu a {
