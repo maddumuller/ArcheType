@@ -8,6 +8,63 @@
 body {
     background: linear-gradient(to bottom, #0a3b5c, #1a526e, #3c768f);
     height: 100vh;
+    overflow: hidden;
+}
+
+.waves-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+
+.wave-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    filter: blur(2px);
+    opacity: 0.9;
+    animation: waveFloat 9s ease-in-out infinite alternate;
+    mask-image: linear-gradient(to left, transparent 0%, white 25%, white 75%, transparent 100%);
+}
+.waves-bg {
+    position: absolute;
+    bottom: -40px;  
+    left: 0;
+    width: 100%;
+    height: 60%;
+    overflow: hidden; 
+    z-index: -1;
+}
+
+
+.wave2 {
+    opacity: 0.5;
+    bottom: 20px;
+    animation-duration: 14s;
+}
+
+/* Movimento MUITO suave (quase parado, igual à referência) */
+@keyframes waveFloat {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+@keyframes waveFloat2 {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(100px); /* segunda onda vai ao contrário */
+    }
 }
 
 .top-bar {
