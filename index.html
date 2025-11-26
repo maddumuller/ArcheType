@@ -1,26 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../ArcheType/src/components/header/header.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArchType</title>
-
-<style>
-
-</style>
+    <title>Document</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/landing-styles.css">
+    <link rel="stylesheet" href="src/styles/wave.css">
+    <link rel="stylesheet" href="src/styles/parallax.css">
 </head>
-<body class="home">
-    <div id="header"></div>
+<body>
+    <header>
+        <div class="left corner">
+            <img src="src/components/images/logo.png" alt="ArchType-Logo.png" style="height: 70px; cursor: pointer;">
+        </div>
+        <div class="right corner">
+            <button class="nav-bar-button">Contate-nos</button>
+            <button class="nav-bar-button">Entrar</button>
+        </div>
+    </header>
+    <section class="hero-section"
+     style="background: linear-gradient(to bottom right, #80B3BA, #2B7483);
+     margin-top: 100px;
+     height: 600px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;">
+        <div class="left corner" style="padding: 100px;">
+            <img src="src/components/images/logotipo.png" alt="ArchType-Logotype">
+            <p style="width: 325px;
+            overflow-wrap: anywhere;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: justify;
+            color: #193E4E;">Crie personas de usuário detalhadas de forma visual e interativa!</p>
+            <p style="width: 225px;
+            overflow-wrap: anywhere;
+            font-weight: 300;
+            font-size: 20px;
+            text-align: justify;
+            color: #efefef;">Conheça seu cliente melhor do que ninguem!</p>
+            <button class="call-action-button">Comece a Criar</button>
+        </div>
+        <div class="right corner" style=" width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: right;
+        align-items: center;">
+            <img src="src/components/images/hero-main-img.png" alt="Man-And-Woman-Working" style="z-index: 10; padding: 40px;">
+            <div class="waves-container">
+                <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none">
+                    <defs>
+                        <path id="wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use href="#wave" x="48" y="0" fill="rgba(128,179,186,0.29)" />
+                        <use href="#wave" x="48" y="3" fill="rgba(128,179,186,0.29)" />
+                        <use href="#wave" x="48" y="5" fill="rgba(128,179,186,0.29)" />
+                    </g>
+                </svg>
+            </div>
+            <div class="parallax-container">
+                <div class="parallax-wrapper orbit-1" style="top:-250px; left:-600px;">
+                    <img 
+                        src="src/components/images/user icon.png" 
+                        class="parallax-layer"
+                        data-force="100"
+                        data-scale="1"
+                    >
+                </div>
 
-<script>
-    fetch("src/components/header/header.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-        });
-</script>
-
-    
+                <div class="parallax-wrapper orbit-2" style="top:-50px; left:-700px;">
+                    <img 
+                        src="src/components/images/puzzle piece with a human silhouette.png" 
+                        class="parallax-layer"
+                        data-force="100"
+                        data-scale="1"
+                        style="height: 150px; width: auto;"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-section" style="background-color: #193E4E; box-shadow: inset 0 4px 10px rgba(0,0,0,0.5); height: 610px; display: flex; justify-content: space-between; align-items: center;">
+        <div class="left corner" style="color: #efefef; width: 600px; padding: 50px;">
+            <h1 style="font-weight: 750; font-size: 35px;">Sobre Archetype</h1>
+            <p style="font-size: 25px; overflow-wrap: anywhere; text-align: justify;">Somos uma plataforma criada para simplificar a forma como equipes entendem seus públicos. Ajudamos empresas a transformar dados em personas claras, estratégicas e vivas, garantindo alinhamento, precisão e decisões mais inteligentes em marketing, produto e comunicação. Acreditamos que toda grande estratégia começa com pessoas. Por isso criamos uma solução que une tecnologia e clareza para revelar quem está por trás dos números. Nosso objetivo é transformar a construção de personas em um processo intuitivo, colaborativo e realmente útil.</p>
+        </div>
+        <div class="right corner" style="padding: 40px;">
+            <img src="src/components/images/Remote work and video call with colleagues.png" alt="SobreNós">
+        </div>
+    </section>
+    <section class="plans-section" style="background-color: #efefef; height: 800px; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+        <div class="left corner" style="max-width: 50%;">
+            <div class="phrase-card">
+                <img src="src/components/images/Digital Interaction and Idea Generation.png" alt="">
+                <div>
+                    <h1>Crie, Descubra e Compartilhe!</h1>
+                    <p>Com <strong>Archetype</strong>, conhecer o cliente é só questão de tempo. Deixe sua equipe alinhada com perfis reais, não suposições!</p>
+                </div>
+            </div>
+            <div class="phrase-card">
+                <div>
+                    <h1>Afinal, o Cliente Tem Sempre Razão!</h1>
+                    <p>Pare de adivinhar. Comece a entender seus clientes de verdade. O <strong>Archetype</strong> dispões de várias ferramentas, com elas saiba exatamente como agrada-los.</p>
+                </div>
+                <img src="src/components/images/Searching brain.png" alt="">
+            </div>
+        </div>
+        <div class="right corner" style="justify-content: center; align-items: center;">
+            <h1>Planos Para Todo Tipo de Orçamento</h1>
+            <div class="plan-cards-container" style="display: flex; flex-direction: row;">
+                <div class="plan-card" style="transform: translateY(20px) translateX(20px); position: relative;">
+                    <div class="top-pattern" style="background-color: #2B7483; height: 100px;"></div>
+                    <div style="padding: 20px;">
+                        <div class="title">
+                            <h1>Econômico</h1>
+                            <h2>Empresarial</h2>
+                        </div>
+                        <div class="price">
+                            <h1>25<span>,99</span></h1>
+                            <h2>p/ usuário mensais</h2>
+                        </div>
+                        <div class="benefits" style="margin-bottom: -10px;">
+                            <li>5 Projetos com 5 personas cada</li>
+                            <li>Criação de projetos individuais</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-card" style="z-index: 100;">
+                    <div class="top-pattern" style="background: linear-gradient(to right, #193E4E, #2B7483); height: 100px;"></div>
+                    <div style="padding: 20px;">
+                        <div class="title">
+                            <h1>Standart</h1>
+                            <h2>Empresarial</h2>
+                        </div>
+                        <div class="price">
+                            <h1>59<span>,99</span></h1>
+                            <h2>p/ usuário mensais</h2>
+                        </div>
+                        <div class="benefits" style="margin-bottom: -10px;">
+                            <li>Projetos e personas ilimitados</li>
+                            <li>Criação de projetos compartilhados</li>
+                            <li>Exportação de personas</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-card" style="transform: translateY(20px) translateX(-20px); position: relative;">
+                    <div class="top-pattern" style="background-image: url(src/components/images/Frame\ 36.png); height: 100px;"></div>
+                    <div style="padding: 20px;">
+                        <div class="title">
+                            <h1>Premium</h1>
+                            <h2>Empresarial</h2>
+                        </div>
+                        <div class="price">
+                            <h1>109<span>,99</span></h1>
+                            <h2>p/ usuário mensais</h2>
+                        </div>
+                        <div class="benefits" style="margin-bottom: -10px;">
+                            <li>Projetos e personas ilimitados</li>
+                            <li>Criação de projetos compartilhados</li>
+                            <li>Exportação de personas</li>
+                            <li>Criação e Personas via IA e importação de pesquisas</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="call-action-button" style="max-width: auto;">Escolha o Seu Plano</button>
+        </div>
+    </section>
+    <footer>
+        <div class="left corner">
+            <img src="src/components/images/logotipovertical.png" alt="logotipo vertical" style="width: 300px;">
+            <p>© 2025 Archetype. Todos os direitos reservados.</p>
+        </div>
+        <hr>
+        <div class="right corner">
+            <p>Outros Links:</p>
+            <li><a href="adicione o link">Contato</a></li>
+            <li><a href="adicione o link">Política de Privacidade</a></li>
+            <li style="margin-bottom: 50px;"><a href="adicione o link">Termos de Uso</a></li>
+            <div style="display: flex; gap: 20px;">
+                <a href="adicione o link"><img src="src/components/images/Mask group.png" alt="email icon"></a>
+                <a href="adicione o link"><img src="src/components/images/Mask group-1.png" alt="instagram icon"></a>
+                <a href="adicione o link"><img src="src/components/images/Mask group-2.png" alt="x icon"></a>
+            </div>
+        </div>
+    </footer>
 </body>
+<script>
+    /*Trecho retirado de codepen*/
+    document.addEventListener("mousemove", (e) => {
+        const layers = document.querySelectorAll(".parallax-layer");
+
+        layers.forEach(layer => {
+            const force = layer.dataset.force || 20; // força padrão
+            const offsetX = Number(layer.dataset.offsetX || 0);
+            const offsetY = Number(layer.dataset.offsetY || 0);
+            const scale = Number(layer.dataset.scale || 1);
+
+            // centro da tela
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+
+            // distância do mouse até centro
+            const moveX = (e.clientX - centerX) / force;
+            const moveY = (e.clientY - centerY) / force;
+
+            layer.style.transform = `
+                translate(${offsetX - moveX}px, ${offsetY - moveY}px)
+                scale(${scale})
+            `;
+        });
+    });
+</script>
 </html>

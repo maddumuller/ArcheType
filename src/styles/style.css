@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+button{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+header{
+    z-index: 1000;
+    background: linear-gradient(to bottom, #193E4E, #2B7483);
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+header .corner{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+footer{
+    background: linear-gradient(to right, #193E4E, #2B7483);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer .corner{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #efefef;
+}
+footer .right{
+    align-items: start;
+}
+
+footer .right a{
+    color: #efefef;
+}
+
+.nav-bar-button{
+    border: solid #efefef 1px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #efefef;
+    background-color: #193E4E;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+.call-action-button{
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #efefef;
+    font-weight: 600;
+    font-size: 20px;
+    background: linear-gradient(to right, #2B7483, #80B3BA);
+}
+
+.call-action-button:hover{
+    background-color: #efefef;
+    color: #193E4E;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.call-action-button:active{
+    background: linear-gradient(to right, #2B7483, #80B3BA);
+    color: #efefef;
+    transform: scale(1) translateY(0px);
+}
+
+.nav-bar-button:hover{
+    background-color: #efefef;
+    color: #193E4E;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.nav-bar-button:active{
+    background-color: #193E4E;
+    color: #efefef;
+    transform: scale(1) translateY(0px);
+}
+

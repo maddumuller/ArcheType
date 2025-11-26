@@ -1,0 +1,34 @@
+.parallax-container {
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+
+}
+
+.parallax-wrapper {
+    position: absolute;
+
+    transform-origin: center center;
+    
+    animation: tilt 4s ease-in-out infinite alternate;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    transform-origin: center;
+    pointer-events: none;
+    transition: transform 0.05s linear;
+    position: relative; /* importante */
+}
+
+@keyframes tilt {
+    0%   { transform: translateX(0px) translateY(0px); }
+    25% {transform: translateX(15px) translateY(-5px);}
+    50% {transform: translateX(5px) translateY(10px);}
+    75%{ transform: translateX(-5px) translateY(15px);}
+    100%{transform: translateX(0) translateY(0px);}
+}

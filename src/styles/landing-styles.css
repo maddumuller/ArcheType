@@ -1,0 +1,168 @@
+.about-section {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, #193E4E 3%, #80B3BA 38%, #2B7483 68%, #16537E 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+.about-section .right img{
+    animation: breath 18s linear reverse infinite;
+}
+
+.phrase-card{
+    background-color: #2B7483;
+    color: #efefef;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.phrase-card div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+.phrase-card img{
+    padding: 30px;
+}
+.phrase-card text{
+    overflow-wrap: anywhere;
+}
+
+.phrase-card h1{
+    text-align: justify;
+}
+
+.plan-card{
+    background-color: #efefef;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 33%;
+
+}
+
+.plan-card div .title h2{
+    font-size: 16px;
+    color: #2B7483;
+    margin-top: -20px;
+}
+
+.plan-card div .price{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -50px;
+}
+
+.plan-card div .price h1{
+    font-size: 60px;
+}
+.plan-card div .price span{
+    font-size: 16px;
+}
+
+.plan-card div .price h2{
+    color: #80B3BA;
+    font-size: 16px;
+    margin-top: -60px;
+}
+
+.plan-card li{
+    font-size: 12px;
+}
+
+.plans-section .right{
+    color: #193E4E;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 60px;
+    justify-content: center;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+@keyframes breath {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(15px, -5px) rotate(-2.5deg);
+  }
+  50% {
+    transform: translate(5px, 10px) rotate(5deg);
+  }
+  75% {
+    transform: translate(-5px, 15px) rotate(7deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
