@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Personas</title>
+
+    <link rel="stylesheet" href="src/styles/personas-style.css">
+    <link rel="stylesheet" href="src/components/header/header.css">
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+     <script src="src/components/header/header.js"></script>
+
+    <main class="container">
+        <h1>Nome do Projeto</h1>
+
+        <p class="descricao">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales non eros nec pellentesque.
+            Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed eu eros non neque porttitor
+            congue sit amet nec leo. Aenean sagittis leo in ullamcorper ullamcorper. Etiam libero enim,
+            cursus id auctor a, ultrices pulvinar metus.
+        </p>
+
+        <div class="pontos">⋯⋯⋯</div>
+
+        <!-- GRID DE PERSONAS -->
+        <section class="grid-personas">
+
+            <!-- Card Criar Persona -->
+            <div class="card criar">
+                <span class="plus">+</span>
+                <p>Criar Nova Persona</p>
+            </div>
+
+            <!-- Cards modelos -->
+            <div class="card">
+                <div class="circle"></div>
+                <h3>Nome da Persona</h3>
+                <p class="sub">Descrição da Persona</p>
+            </div>
+
+            <div class="card">
+                <div class="circle"></div>
+                <h3>Nome da Persona</h3>
+                <p class="sub">Descrição da Persona</p>
+            </div>
+
+            <div class="card">
+                <div class="circle"></div>
+                <h3>Nome da Persona</h3>
+                <p class="sub">Descrição da Persona</p>
+            </div>
+
+            <div class="card">
+                <div class="circle"></div>
+                <h3>Nome da Persona</h3>
+                <p class="sub">Descrição da Persona</p>
+            </div>
+
+            <div class="card">
+                <div class="circle"></div>
+                <h3>Nome da Persona</h3>
+                <p class="sub">Descrição da Persona</p>
+            </div>
+
+            <div class="card">
+                <div class="circle"></div>
+                <h3>Nome da Persona</h3>
+                <p class="sub">Descrição da Persona</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        /* Puxa o header pronto */
+        fetch("../header.html")
+            .then(r => r.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
