@@ -127,7 +127,92 @@
             </div>
         </div>
     </footer>
+
+<!-- ============ MODAL DE INFORMAÇÕES DA CONTA ============ -->
+<div id="accountModal" class="modal-overlay-account">
+
+    <div class="account-modal-box">
+
+        <!-- Botão de fechar -->
+        <img src="src/components/images/close.png" class="close-account-modal" id="closeAccountModal">
+
+        <div class="account-content">
+
+            <!-- LADO ESQUERDO -->
+            <div class="left-area">
+
+                <img src="src/components/images/user.png" class="profile-photo">
+
+                <a href="#" class="change-photo">Alterar Foto</a>
+                <a href="#" class="change-password">Alterar Senha</a>
+                <a href="#" class="delete-account">Excluir Conta</a>
+
+            </div>
+
+            <!-- LADO DIREITO -->
+            <div class="right-area">
+
+                <!-- Nome -->
+                <label class="field-label">Nome</label>
+                <div class="field-box">
+                    <input type="text" value="Joao">
+                    <img class="edit-icon" src="fi-rr-pencil.svg" alt= "Ícone">
+
+                </div>
+
+                <!-- Email -->
+                <label class="field-label">Email</label>
+                <div class="field-box">
+                    <input type="email" value="joao@gmail.com">
+                   <img class="edit-icon" src="fi-rr-pencil.svg" alt= "Ícone">
+
+                </div>
+
+                <!-- Plano -->
+                <label class="field-label">Seu Plano</label>
+                <div class="field-box">
+                    <input type="text" value="Premium" disabled>
+                    <i class="fi fi-rr-pencil" style="opacity: 0.25; cursor: not-allowed;"></i>
+                </div>
+
+                <!-- CONFIG SYSTEM -->
+                <div class="system-config">
+                    <h3>⚙ Configurações de Sistema</h3>
+
+                    <div class="config-row">
+
+                        <div class="config-item">
+                            <label>Idioma</label>
+                            <select>
+                                <option>Português (Brasil)</option>
+                                <option>Inglês (EUA)</option>
+                            </select>
+                        </div>
+
+                        <div class="config-item">
+                            <label>Tema</label>
+                            <select>
+                                <option>Tema do Sistema</option>
+                                <option>Claro</option>
+                                <option>Escuro</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="btn-apply">Aplicar</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
 <script>
+
 /* ============================================
                 DADOS DOS PROJETOS
 =============================================== */
@@ -276,6 +361,31 @@ document.querySelector(".contact-form").onsubmit = e => {
     alert("Mensagem enviada!");
     modal.style.display = "none";
 };
+
+// ===================== MODAL DA CONTA =====================
+
+const accountModal = document.getElementById("accountModal");
+const userIconNavbar = document.querySelector("header .right.corner a img");
+const closeAccount = document.getElementById("closeAccountModal");
+
+// abrir modal ao clicar no ícone do usuário
+userIconNavbar.addEventListener("click", (e) => {
+    e.preventDefault();
+    accountModal.style.display = "flex";
+});
+
+// fechar ao clicar no X
+closeAccount.onclick = () => {
+    accountModal.style.display = "none";
+};
+
+// fechar clicando no fundo escuro
+accountModal.onclick = (e) => {
+    if (e.target === accountModal) {
+        accountModal.style.display = "none";
+    }
+};
+
 </script>
 
 </body>
