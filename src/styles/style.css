@@ -94,7 +94,7 @@ footer .right a{
 }
 
 .call-action-button:hover{
-    background-color: #efefef;
+    background: #efefef;
     color: #193E4E;
 }
 .call-action-button:active{

@@ -1,0 +1,18 @@
+.card-plan{
+    width: 400px;
+    background-color: #efefef;
+    transition: all 0.2s ease-in-out;
+    justify-content: space-between;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-plan:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px #193E4E;
+}
+
+.call-action-button {
+    bottom: 0;
+    margin-top: auto;
+}
