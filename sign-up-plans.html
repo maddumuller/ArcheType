@@ -31,12 +31,12 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 300%;
+        width: 400%;
         z-index: 1;
         background-repeat: repeat-x;
-        background-size: contain;
+        background-size: auto 100%;
         opacity: 0.35;
-        animation: moveWave linear infinite;
+        animation: moveWave ease-in-out infinite;
     }
 
     /* ONDAS COM DIFERENTES ALTURAS */
@@ -48,8 +48,9 @@
 
     /* Animação base */
     @keyframes moveWave {
-        from { transform: translateX(0); }
-        to { transform: translateX(-50%); }
+        0% { transform: translateX(0); }
+        50% { transform: translateX(-50%); }
+        100% {transform: translateX(0);}
     }
 
     .card-plan{
@@ -59,7 +60,7 @@
     /* ANIMAÇÃO LENTA */
     @keyframes moveWaves {
         from { transform: translateX(0); }
-        to { transform: translateX(-50%); }
+        to { transform: translateX(-100%); }
     }
 </style>
 <body style="background: #193E4E;">
@@ -92,7 +93,7 @@
 
                 <!-- BOTÃO -->
                 <div style="padding: 0 50px 50px 50px;">
-                    <button class="call-action-button" style="width: 100%;">Escolher</button>
+                    <button class="call-action-button" style="width: 100%;"  onclick="window.location.href='sign-up-dados.html'">Escolher</button>
                 </div>
             </div>
 
@@ -118,7 +119,7 @@
 
                 <!-- BOTÃO -->
                 <div style="padding: 0 50px 50px 50px;">
-                    <button class="call-action-button" style="width: 100%;">Escolher</button>
+                    <button class="call-action-button" style="width: 100%;" onclick="window.location.href='sign-up-dados.html'">Escolher</button>
                 </div>
             </div>
 
@@ -146,7 +147,7 @@
 
                 <!-- BOTÃO -->
                 <div style="padding: 0 50px 50px 50px;">
-                    <button class="call-action-button" style="width: 100%;">Escolher</button>
+                    <button class="call-action-button" style="width: 100%;" onclick="window.location.href='sign-up-dados.html'">Escolher</button>
                 </div>
             </div>
 

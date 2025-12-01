@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archetype - Cadastre-se</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/sign-up.css">
+</head>
+<style>
+    /* CONTAINER DO BACKGROUND */
+    .background {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* ONDAS */
+    .background {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Container de ondas */
+    .wave-layer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 400%;
+        z-index: 1;
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        opacity: 0.35;
+        animation: moveWave ease-in-out infinite;
+    }
+
+    /* ONDAS COM DIFERENTES ALTURAS */
+    .wave1 { height: 120px; background-image: url('src/components/images/wave1.svg'); animation-duration: 10s; z-index: 1; }
+    .wave2 { height: 150px; background-image: url('src/components/images/wave2.svg'); animation-duration: 15s; z-index: 1; }
+    .wave3 { height: 180px; background-image: url('src/components/images/wave3.svg'); animation-duration: 20s; z-index: 1; }
+    .wave4 { height: 220px; background-image: url('src/components/images/wave4.svg'); animation-duration: 27.5s; z-index: 1; }
+    .wave5 { height: 260px; background-image: url('src/components/images/wave5.svg'); animation-duration: 37.5s; z-index: 1; }
+
+    /* Animação base */
+    @keyframes moveWave {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(-50%); }
+        100% {transform: translateX(0);}
+    }
+
+    .card-plan{
+        z-index: 10;
+    }
+
+    /* ANIMAÇÃO LENTA */
+    @keyframes moveWaves {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+</style>
+<body style="background: #193E4E;">
+    <div class="background" style="display: flex; justify-content: right; align-items: center;">
+        <div class="wave-layer wave1"></div>
+        <div class="wave-layer wave2"></div>
+        <div class="wave-layer wave3"></div>
+        <div class="wave-layer wave4"></div>
+        <div class="wave-layer wave5"></div> 
+        <div class="main">
+            <img src="src/components/images/logoHorizontalAzul.png" alt="logo" style="height: 100px;">
+            <div class="plan-selecionado" style=" padding: 0; width: 300px; display:  flex; flex-direction: row; align-items: center; gap: 5px; background: #efefef; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px #000000;">
+                <div style="background: #2b7483; width: 80px; height: 80px;"></div>
+                <div style="display: flex; flex-direction: column; justify-content: center; padding: 10px">
+                    <h1 style="margin-top: -30px; font-size: 26px; color: #193E4E;">Econômico</h1>
+                    <h2 style="margin-top: -30px; margin-bottom: -30px; font-size: medium; color: #2b7483;">Empresarial</h2>
+                </div>
+            </div>
+            <form action="get">
+                <div class="form-group">
+                    <h1>Email:</h1>
+                    <input type="email" placeholder="Insira seu email">
+                </div>
+                <div class="form-group">
+                    <h1>Nome de usuário:</h1>
+                    <input type="text" placeholder="Insira seu nome de usuário">
+                </div>
+                <div class="form-group">
+                    <h1>Senha:</h1>
+                    <input type="password" placeholder="Insira sua senha">
+                </div>
+                <div class="form-group">
+                    <h1>Confirme sua senha:</h1>
+                    <input type="password" placeholder="Confirme sua senha">
+                </div>
+            </form>
+            <button onclick="window.location.href='projects.html'" class="call-action-button" style=" margin-top: 40px; width: 100%; height: 40px;">Continuar</button>
+            <h1 style="color: #193E4E; font-size: 20px;">Já possue uma conta?</h1>
+            <button class="call-action-button" onclick="window.location.href='login.html'" style="height: 40px; width: 100%; margin-top: 0px; background: #efefef; color: #193E4E; border: solid 1px #193E4E;">Faça o Login</button>
+        </div>
+    </div>
+</body>
+</html>
