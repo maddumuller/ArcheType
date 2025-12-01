@@ -40,5 +40,35 @@
     </main>
 
     <script src="src/scripts/personas.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Recupera o que foi salvo no JS anterior
+            const dados = localStorage.getItem('personaAtiva');
+
+            if (dados) {
+                const p = JSON.parse(dados);
+
+                // Preenche Título
+                const titulo = document.querySelector('.page-title');
+                if(titulo) titulo.innerText = p.nome;
+
+                // Preenche Input
+                const inName = document.querySelector('.input-name input');
+                if(inName) inName.value = p.nome;
+
+                const inAge = document.querySelector('.input-age input');
+                if(inAge) inAge.value = p.idade || "-"; 
+
+                const inGender = document.querySelector('.input-gender input');
+                if(inGender) inGender.value = p.genero || "-";
+
+                const txtDesc = document.querySelector('.styled-textarea');
+                if(txtDesc) txtDesc.value = p.desc;
+            }
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
