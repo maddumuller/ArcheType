@@ -6,9 +6,22 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+input{
+    transition: all 0.2s ease-in-out;
+}
+input:focus{
+    transform: scale(1.05);
+}
 button{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button:hover{
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 header{
     z-index: 1000;
@@ -83,8 +96,6 @@ footer .right a{
 .call-action-button:hover{
     background-color: #efefef;
     color: #193E4E;
-    transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 .call-action-button:active{
     background: linear-gradient(to right, #2B7483, #80B3BA);

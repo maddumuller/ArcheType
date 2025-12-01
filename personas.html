@@ -5,86 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página de Personas</title>
 
+    <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/personas-style.css">
     <link rel="stylesheet" href="src/components/header/header.css">
 </head>
 
 <body>
 
+    <header>
+        <div class="left corner">
+            <a href="projects.html"><img src="src/components/images/logo.png" style="height: 70px; cursor: pointer;"></a>
+        </div>
+        <div class="right corner">
+            <button class="nav-bar-button" id="btnContact">Contate-nos</button>
+            <a href=""><img src="src/components/images/user.png" style="height: 80px;"></a>
+        </div>
+    </header>
 
-    <div id="header"></div>
-     <script src="src/components/header/header.js"></script>
+    <div style="height: 100px;"></div>
 
     <main class="container">
-        <h1>Nome do Projeto</h1>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <h1>Nome do Projeto</h1>
+            <a href=""><img src="src/components/images/more.png" alt="more" style="width: 40px;"></a>
+        </div>
 
-        <p class="descricao">
+        <p class="descricao" style="color: #2B7483; font-weight: 600; width: 100%; margin-bottom: 50px;">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales non eros nec pellentesque.
-            Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed eu eros non neque porttitor
-            congue sit amet nec leo. Aenean sagittis leo in ullamcorper ullamcorper. Etiam libero enim,
-            cursus id auctor a, ultrices pulvinar metus.
         </p>
 
-        <div class="pontos">⋯⋯⋯</div>
-
         <!-- GRID DE PERSONAS -->
-        <section class="grid-personas">
-
-            <!-- Card Criar Persona -->
-            <div class="card criar">
-                <span class="plus">+</span>
-                <p>Criar Nova Persona</p>
-            </div>
-
-            <!-- Cards modelos -->
-            <div class="card">
-                <div class="circle"></div>
-                <h3>Nome da Persona</h3>
-                <p class="sub">Descrição da Persona</p>
-            </div>
-
-            <div class="card">
-                <div class="circle"></div>
-                <h3>Nome da Persona</h3>
-                <p class="sub">Descrição da Persona</p>
-            </div>
-
-            <div class="card">
-                <div class="circle"></div>
-                <h3>Nome da Persona</h3>
-                <p class="sub">Descrição da Persona</p>
-            </div>
-
-            <div class="card">
-                <div class="circle"></div>
-                <h3>Nome da Persona</h3>
-                <p class="sub">Descrição da Persona</p>
-            </div>
-
-            <div class="card">
-                <div class="circle"></div>
-                <h3>Nome da Persona</h3>
-                <p class="sub">Descrição da Persona</p>
-            </div>
-
-            <div class="card">
-                <div class="circle"></div>
-                <h3>Nome da Persona</h3>
-                <p class="sub">Descrição da Persona</p>
-            </div>
-
-        </section>
+        <section id="grid-personas" class="grid-personas"></section>
 
     </main>
 
-    <script>
-        /* Puxa o header pronto */
-        fetch("../header.html")
-            .then(r => r.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-            });
-    </script>
-
+    <script src="src/scripts/personas.js"></script>
 </body>
 </html>

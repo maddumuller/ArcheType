@@ -3,243 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel de Projetos</title>
-    
+    <title>Archetype - Painel de Projetos</title>
+
+    <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/projects.css">
-    
-    <link rel="stylesheet" href="src/styles/landing-styles.css">
-    <link rel="stylesheet" href="src/styles/wave.css">
-    <link rel="stylesheet" href="src/styles/parallax.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .carousel-wrapper { display: flex; align-items: center; gap: 10px; }
+        .arrow-btn.disabled { opacity: .3; pointer-events: none; }
+        .empty-msg { color: #aaa; padding: 20px; font-size: 1.1rem; }
+        .hidden { display: none !important; }
+        .arrow-btn:hover{
+            box-shadow: none;
+        }
+    </style>
 </head>
+
 <body>
 
-    <header class="main-header">
-        <div class="h-left">
-            <img src="src/components/images/logo.png" alt="Logo">
-            <a href="projects.html" class="nav-pill">Projetos</a>
-        </div>
-        <div class="h-right">
-            <button class="btn-contact" id="btnContact">Contate-nos</button>
-            <i class="fa-solid fa-circle-user user-avatar"></i>
-        </div>
-    </header>
+<header>
+    <div class="left corner">
+        <a href="projects.html"><img src="src/components/images/logo.png" style="height: 70px; cursor: pointer;"></a>
+    </div>
+    <div class="right corner">
+        <button class="nav-bar-button" id="btnContact">Contate-nos</button>
+        <a href=""><img src="src/components/images/user.png" style="height: 80px;"></a>
+    </div>
+</header>
 
-    <main>
-        <div class="dashboard-header">
-            <h1 class="page-title">Meus projetos</h1>
-            <div class="dashboard-actions">
-                <a href="criar-projeto.html" class="btn-new">Novo Projeto <i class="fa-solid fa-circle-plus"></i></a>
-                <div class="search-box">
-                    <input type="text" id="searchInput" class="search-inp" placeholder="Buscar projeto">
-                    <button class="search-btn" onclick="buscar()"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+<main>
+
+    <div class="dashboard-header">
+        <h1 class="page-title">Meus projetos</h1>
+        <div class="dashboard-actions">
+            <button class="call-action-button" style="border: 0; height: 50px; font-size: medium; gap: 10px;">
+                Novo Projeto <img src="src/components/images/add-icon.png">
+            </button>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search-inp" placeholder="Buscar projeto...">
             </div>
-        </div>
-
-        <section>
-            <h2>Recentes</h2>
-            <div class="carousel-wrapper">
-                <button class="arrow-btn" id="btnLeft"><i class="fa-solid fa-chevron-left"></i></button>
-                <div class="cards-scroll" id="scrollContainer">
-                    
-                    <div class="card">
-                        <div class="card-top"><div class="mockup"></div></div>
-                        <div class="card-bot">
-                            <div class="card-info"><i class="fa-solid fa-pen-nib"></i><div class="txt"><h3>Projeto Exemplo 1</h3><p>Há 1 dia</p></div></div>
-                            <div class="collab">
-                                <i class="fa-solid fa-circle-user"></i><span>+3</span>
-                                <div class="tooltip">
-                                    <div class="t-row"><div class="t-avt">JS</div> João Silva</div>
-                                    <div class="t-row"><div class="t-avt">MA</div> Maria A.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-top"><div class="mockup"></div></div>
-                        <div class="card-bot">
-                            <div class="card-info"><i class="fa-solid fa-pen-nib"></i><div class="txt"><h3>Projeto Exemplo 2</h3><p>Há 2 dias</p></div></div>
-                            <div class="collab"><i class="fa-solid fa-circle-user"></i></div>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-top"><div class="mockup"></div></div>
-                        <div class="card-bot">
-                            <div class="card-info"><i class="fa-solid fa-pen-nib"></i><div class="txt"><h3>Projeto Exemplo 3</h3><p>Há 1 semana</p></div></div>
-                            <div class="collab"><i class="fa-solid fa-circle-user"></i><span>+2</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-top"><div class="mockup"></div></div>
-                        <div class="card-bot">
-                            <div class="card-info"><i class="fa-solid fa-pen-nib"></i><div class="txt"><h3>Projeto Antigo</h3><p>Há 1 mês</p></div></div>
-                            <div class="collab"><i class="fa-solid fa-circle-user"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <button class="arrow-btn" id="btnRight"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-        </section>
-
-        <section>
-            <h2>Meus projetos</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-top"><div class="mockup"></div></div>
-                    <div class="card-bot">
-                        <div class="card-info"><i class="fa-solid fa-pen-nib"></i><div class="txt"><h3>Projeto Exemplo 2</h3><p>Há 2 dias</p></div></div>
-                        <div class="collab"><i class="fa-solid fa-circle-user"></i></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Compartilhados comigo</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-top"><div class="mockup"></div></div>
-                    <div class="card-bot">
-                        <div class="card-info"><i class="fa-solid fa-pen-nib"></i><div class="txt"><h3>Projeto Exemplo 1</h3><p>Há 1 dia</p></div></div>
-                        <div class="collab"><i class="fa-solid fa-circle-user"></i><span>+3</span>
-                            <div class="tooltip"><div class="t-row"><div class="t-avt">G</div> Gerente</div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="contactModal" class="modal-overlay">
-        <div class="modal-box">
-            <div class="modal-logo-area">
-                <img src="src/components/images/logo.png" alt="Archetype Logo" class="modal-logo-img">
-                <span class="modal-logo-text">ARCHETYPE</span>
-            </div>
-
-            <h2 class="modal-title">Contate-nos</h2>
-
-            <form class="contact-form">
-                <label for="email">Seu email:</label>
-                <input type="email" id="email" placeholder="Insira seu email">
-
-                <label for="subject">Assunto:</label>
-                <input type="text" id="subject" placeholder="Pagamentos, suporte, etc...">
-
-                <label for="message">Mensagem:</label>
-                <textarea id="message" rows="4" placeholder="Descreva sua dúvida ou problema"></textarea>
-
-                <button type="submit" class="btn-send">Enviar mensagem</button>
-            </form>
         </div>
     </div>
 
-    <script>
-        // --- 1. Lógica do Carrossel ---
-        const container = document.getElementById('scrollContainer');
-        const btnL = document.getElementById('btnLeft');
-        const btnR = document.getElementById('btnRight');
-        
-        if (container && btnL && btnR) {
-            const move = (dir) => container.scrollBy({ left: dir === 'r' ? 320 : -320, behavior: 'smooth' });
-            btnR.onclick = () => move('r');
-            btnL.onclick = () => move('l');
-            container.onscroll = () => btnL.style.display = container.scrollLeft > 10 ? 'block' : 'none';
-        }
+    <!-- ===================== RECENTES ===================== -->
+    <section>
+        <h2>Recentes</h2>
 
-        // --- 2. Lógica da Busca ---
-        const inp = document.getElementById('searchInput');
-        function buscar() {
-            const val = inp.value.toLowerCase().trim();
-            if(!val) return alert("Digite um nome.");
-            let found = false;
-            document.querySelectorAll('.txt h3').forEach(h3 => {
-                const card = h3.closest('.card');
-                card.style.border = "none";
-                if(h3.innerText.toLowerCase().includes(val)) {
-                    card.style.border = "2px solid red";
-                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    found = true;
-                }
-            });
-            if(!found) alert("Projeto não encontrado.");
-        }
-        if(inp) inp.addEventListener('keypress', (e) => { if(e.key === 'Enter') buscar() });
+        <div class="empty-msg hidden" id="msgRecentes"></div>
 
-        // --- 3. Lógica do Modal e Validação ---
-        const contactModal = document.getElementById('contactModal');
-        const btnContact = document.getElementById('btnContact');
-        
-        // Elementos do Formulário
-        const contactForm = document.querySelector('.contact-form');
-        const inputEmail = document.getElementById('email');
-        const inputSubject = document.getElementById('subject');
-        const inputMessage = document.getElementById('message');
+        <div class="carousel-wrapper">
+            <button class="arrow-btn" id="btnLeftRecentes">
+                <img src="src/components/images/lft-arrow.png" class="arrow-img">
+            </button>
 
-        if (btnContact && contactModal) {
-            // Abrir Modal
-            btnContact.addEventListener('click', (e) => {
-                e.preventDefault();
-                contactModal.style.display = 'flex';
-            });
+            <div class="cards-scroll" id="scrollRecentes"></div>
 
-            // Fechar Modal ao clicar fora
-            contactModal.addEventListener('click', (e) => {
-                if (e.target === contactModal) {
-                    contactModal.style.display = 'none';
-                    limparErros(); // Limpa os vermelhos se fechar sem enviar
-                }
-            });
-        }
+            <button class="arrow-btn" id="btnRightRecentes">
+                <img src="src/components/images/rgt-arrow.png" class="arrow-img">
+            </button>
+        </div>
+    </section>
 
-        // Função para limpar as bordas vermelhas
-        function limparErros() {
-            [inputEmail, inputSubject, inputMessage].forEach(campo => {
-                campo.classList.remove('input-error');
-            });
-        }
+    <!-- ===================== MEUS PROJETOS ===================== -->
+    <section>
+        <h2>Meus Projetos</h2>
 
-        // --- VALIDAÇÃO DO ENVIO ---
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault(); // Impede o envio real (recarregar página)
-                
-                let temErro = false;
-                limparErros(); // Remove erros antigos antes de validar
+        <div class="empty-msg hidden" id="msgMeus"></div>
 
-                // Validação Campo E-mail
-                if (!inputEmail.value.trim()) {
-                    inputEmail.classList.add('input-error');
-                    temErro = true;
-                }
+        <div class="cards-grid" id="gridMeus"></div>
+    </section>
 
-                // Validação Campo Assunto
-                if (!inputSubject.value.trim()) {
-                    inputSubject.classList.add('input-error');
-                    temErro = true;
-                }
+    <!-- ===================== COMPARTILHADOS ===================== -->
+    <section>
+        <h2>Compartilhados Comigo</h2>
 
-                // Validação Campo Mensagem
-                if (!inputMessage.value.trim()) {
-                    inputMessage.classList.add('input-error');
-                    temErro = true;
-                }
+        <div class="empty-msg hidden" id="msgCompartilhados"></div>
 
-                if (temErro) {
-                    alert("Por favor, preencha todos os campos obrigatórios.");
-                } else {
-                    // SUCESSO!
-                    alert("Mensagem enviada com sucesso. Nossa equipe entrará em contato o mais breve possível.");
-                    contactForm.reset(); // Limpa o formulário
-                    contactModal.style.display = 'none'; // Fecha o modal
-                }
-            });
-        }
-    </script>
+        <div class="cards-grid" id="gridCompartilhados"></div>
+    </section>
+
+</main>
+
+<!-- ============ MODAL DE CONTATO ============ -->
+<div id="contactModal" class="modal-overlay">
+    <div class="modal-box">
+        <div class="modal-logo-area">
+            <img src="src/components/images/logo.png" class="modal-logo-img">
+            <span class="modal-logo-text">ARCHETYPE</span>
+        </div>
+
+        <h2 class="modal-title">Contate-nos</h2>
+
+        <form class="contact-form">
+            <label for="email">Seu email:</label>
+            <input type="email" id="email">
+
+            <label for="subject">Assunto:</label>
+            <input type="text" id="subject">
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" rows="4"></textarea>
+
+            <button type="submit" class="btn-send">Enviar mensagem</button>
+        </form>
+    </div>
+</div>
+<footer style="bottom: 0px;">
+        <div class="left corner">
+            <img src="src/components/images/logotipovertical.png" alt="logotipo vertical" style="width: 300px;">
+            <p>© 2025 Archetype. Todos os direitos reservados.</p>
+        </div>
+        <hr>
+        <div class="right corner">
+            <p>Outros Links:</p>
+            <li><a href="adicione o link">Contato</a></li>
+            <li><a href="adicione o link">Política de Privacidade</a></li>
+            <li style="margin-bottom: 50px;"><a href="adicione o link">Termos de Uso</a></li>
+            <div style="display: flex; gap: 20px;">
+                <a href="adicione o link"><img src="src/components/images/Mask group.png" alt="email icon"></a>
+                <a href="adicione o link"><img src="src/components/images/Mask group-1.png" alt="instagram icon"></a>
+                <a href="adicione o link"><img src="src/components/images/Mask group-2.png" alt="x icon"></a>
+            </div>
+        </div>
+    </footer>
+<script>
+/* ============================================
+                DADOS DOS PROJETOS
+=============================================== */
+const projetos = {
+    recentes: [
+        { nome: "Rascunho de Campanha de Marketing", tempo: "Há 1 dia", collab: 3 },
+        { nome: "Mapa da Campanha", tempo: "Há 2 dias", collab: 1 },
+        { nome: "Projeto X", tempo: "Há 3 dias", collab: 2 },
+        { nome: "Arquétipos Iniciais", tempo: "Há 1 semana", collab: 0 },
+        { nome: "Sistema Teste", tempo: "Há 2 semanas", collab: 1 }
+    ],
+    meus: [
+        { nome: "Archetype", tempo: "Há 1 dia", collab: 2 },
+        { nome: "Propagandas Produto 1", tempo: "Há 3 dias", collab: 0 },
+        { nome: "Projeto z", tempo: "Há 1 semana", collab: 4 }
+    ],
+    compartilhados: [
+        { nome: "Projeto da Equipe", tempo: "Há 2 dias", collab: 3 },
+        { nome: "Anotações Gerais", tempo: "Há 5 dias", collab: 1 }
+    ]
+};
+
+/* ============================================
+            FUNÇÃO DE CRIAÇÃO DE CARD
+=============================================== */
+function criarCard(p) {
+    return `
+        <a href="personas.html" style="text-decoration: none;">
+            <div class="card" style="max-height: 212px; overflow: hidden;">
+                <div class="card-top"><div class="mockup"></div></div>
+                <div class="card-bot">
+                    <div class="card-info">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <div class="txt">
+                            <div style="max-width: 240px">
+                                <h3 style="overflow: hidden; text-overflow : ellipsis;white-space: nowrap;display: block;">${p.nome}</h3>
+                            </div>
+                            <p>${p.tempo}</p>
+                        </div>
+                    </div>
+                    <div class="collab">
+                        <i class="fa-solid fa-circle-user"></i>
+                        ${p.collab > 1 ? `<span>+${p.collab}</span>` : ""}
+                    </div>
+                </div>
+            </div>
+        </a>`;
+}
+
+/* ============================================
+            RENDERIZAÇÃO DAS TELAS
+=============================================== */
+function listarProjetos() {
+    document.getElementById("scrollRecentes").innerHTML =
+        projetos.recentes.map(criarCard).join("");
+
+    document.getElementById("gridMeus").innerHTML =
+        projetos.meus.map(criarCard).join("");
+
+    document.getElementById("gridCompartilhados").innerHTML =
+        projetos.compartilhados.map(criarCard).join("");
+
+    atualizarCarrossel("scrollRecentes", "btnLeftRecentes", "btnRightRecentes");
+}
+listarProjetos();
+
+/* ============================================
+                BUSCA DINÂMICA
+=============================================== */
+const input = document.getElementById("searchInput");
+
+input.addEventListener("input", () => {
+    const texto = input.value.trim().toLowerCase();
+    filtrarProjetos(texto);
+});
+
+function filtrarProjetos(texto) {
+    filtrarCategoria("recentes", "scrollRecentes", "msgRecentes", texto);
+    filtrarCategoria("meus", "gridMeus", "msgMeus", texto);
+    filtrarCategoria("compartilhados", "gridCompartilhados", "msgCompartilhados", texto);
+
+    // atualizar carrossel após re-render
+    atualizarCarrossel("scrollRecentes", "btnLeftRecentes", "btnRightRecentes");
+}
+
+function filtrarCategoria(nomeCategoria, idContainer, idMsg, termo) {
+    const container = document.getElementById(idContainer);
+    const msg = document.getElementById(idMsg);
+
+    // filtra diretamente os dados originais
+    const filtrados = projetos[nomeCategoria].filter(p =>
+        p.nome.toLowerCase().includes(termo)
+    );
+
+    // renderiza somente os filtrados
+    container.innerHTML = filtrados.map(criarCard).join("");
+
+    // mensagem caso vazio
+    if (filtrados.length === 0) {
+        msg.innerText = `Não há projetos em ${nomeCategoria} com o termo "${termo}".`;
+        msg.classList.remove("hidden");
+    } else {
+        msg.classList.add("hidden");
+    }
+
+    // reset scroll para o início
+    if (container.classList.contains("cards-scroll")) {
+        container.scrollLeft = 0;
+    }
+}
+
+
+
+
+/* ============================================
+                CARROSSEL
+=============================================== */
+function atualizarCarrossel(idScroll, idLeft, idRight) {
+    const sc = document.getElementById(idScroll);
+    const btnL = document.getElementById(idLeft);
+    const btnR = document.getElementById(idRight);
+
+    const maxScroll = sc.scrollWidth - sc.clientWidth;
+
+    btnL.classList.toggle("disabled", sc.scrollLeft <= 0);
+    btnR.classList.toggle("disabled", sc.scrollLeft >= maxScroll);
+
+    btnL.onclick = () => { sc.scrollBy({ left: -320, behavior: "smooth" }); };
+    btnR.onclick = () => { sc.scrollBy({ left: 320, behavior: "smooth" }); };
+
+    sc.onscroll = () => {
+        btnL.classList.toggle("disabled", sc.scrollLeft <= 0);
+        btnR.classList.toggle("disabled", sc.scrollLeft >= sc.scrollWidth - sc.clientWidth);
+    };
+}
+
+/* ============================================
+            MODAL + FORM SIMPLIFICADO
+=============================================== */
+const modal = document.getElementById("contactModal");
+document.getElementById("btnContact").onclick = () => modal.style.display = "flex";
+modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+
+document.querySelector(".contact-form").onsubmit = e => {
+    e.preventDefault();
+    alert("Mensagem enviada!");
+    modal.style.display = "none";
+};
+</script>
+
 </body>
 </html>

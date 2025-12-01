@@ -71,7 +71,7 @@
     border-radius: 15px;
     overflow: hidden;
     max-width: 33%;
-
+    min-width: 33%;
 }
 
 .plan-card div .title h2{

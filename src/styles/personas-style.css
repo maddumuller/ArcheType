@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
     background: #f3f7f7;
 }
 
@@ -18,11 +17,11 @@ h1 {
 }
 
 .descricao {
-    max-width: 900px;
     line-height: 1.5;
     font-size: 15px;
-    color: #444;
     margin-bottom: 20px;
+    color: #2b7483;
+    font-weight: 600;
 }
 
 .pontos {
@@ -35,21 +34,32 @@ h1 {
 /* GRID */
 .grid-personas {
     margin-top: 20px;
-    background: #0a3b5c;
+    background: linear-gradient(to right bottom, #193E4E, #80B3BA);;
     padding: 25px;
-    border-radius: 22px;
+    border-radius: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 18px;
+    max-height: 435px;          /* altura fixa */
+    overflow-y: auto;        /* scroll vertical */
+    padding-right: 10px;     /* espaço pro scroll */
+}
+
+.grid-personas::-webkit-scrollbar {
+    width: 10px;
+}
+
+.grid-personas::-webkit-scrollbar-thumb {
+    background: #efefef;
+    border-radius: 8px;
 }
 
 /* CARD */
 .card {
-    background: white;
-    border-radius: 14px;
+    background: #efefef;
     padding: 18px;
     text-align: center;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     transition: .2s;
 }
 
@@ -62,13 +72,14 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px dashed #074d75;
+    align-items: center;
+    color: #193E4E;
+    font-weight: 600;
 }
 
-.card.criar .plus {
-    font-size: 42px;
-    font-weight: bold;
-    color: #074d75;
+.card.criar img {
+    height: 100px;
+    width: 100px;
 }
 
 .circle {
@@ -88,5 +99,6 @@ h3 {
 .sub {
     font-size: 13px;
     margin-top: 4px;
-    color: #777;
+    color: #2b7483;
+    font-weight: 600;
 }
