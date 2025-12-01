@@ -47,10 +47,13 @@ h1 {
 
 .grid-personas::-webkit-scrollbar {
     width: 10px;
+    background: #2B7483;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .grid-personas::-webkit-scrollbar-thumb {
-    background: #efefef;
+    background: #16537E;
     border-radius: 8px;
 }
 
