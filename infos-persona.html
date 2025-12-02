@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona Detalhes</title>
+    
+    <link rel="stylesheet" href="src/styles/infos-persona.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="h-left">
+            <img src="src/components/images/logo.png" alt="Logo">
+        </div>
+        <div class="h-right">
+            <a href="#" class="btn-contact">Contate-nos</a>
+            <i class="fa-solid fa-circle-user user-avatar"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="back-nav">
+            <a href="personas.html" class="btn-back">
+                Voltar <i class="fa-solid fa-arrow-right-from-bracket" style="transform: rotate(180deg);"></i>
+            </a>
+        </div>
+
+        <h1 class="page-title">Persona Exemplo</h1>
+
+        <div class="persona-header-container">
+            <div class="avatar-section">
+                <div class="big-avatar"></div>
+            </div>
+
+            <div class="info-section">
+                <div class="row-inputs">
+                    <div class="input-group input-name">
+                        <label>Nome:</label>
+                        <input type="text" class="styled-input" value="Persona Exemplo" readonly>
+                    </div>
+                    
+                    <div class="input-group input-age">
+                        <label>Idade:</label>
+                        <input type="text" class="styled-input" value="32" readonly>
+                    </div>
+
+                    <div class="input-group input-gender">
+                        <label>Gênero:</label>
+                        <input type="text" class="styled-input" value="Masculino" readonly>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Descrição:</label>
+                    <textarea class="styled-textarea" rows="4" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ante magna, blandit eu cursus in, imperdiet ut dolor. Fusce aliquam sed erat in auctor.</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="details-grid">
+            
+            <div class="detail-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3>Objetivos:</h3>
+                </div>
+                <ul class="card-list">
+                    <li>Liderar projetos</li>
+                    <li>Viagens internacionais</li>
+                    <li>Evolução de carreira</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-face-tired"></i>
+                    <h3>Frustrações:</h3>
+                </div>
+                <ul class="card-list">
+                    <li>Reuniões infinitas</li>
+                    <li>Falta de feedback</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="card-header">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <h3>Opiniões Gerais:</h3>
+                </div>
+                <ul class="card-list">
+                    <li>Valoriza trabalho híbrido</li>
+                    <li>Gosta de trabalhos em equipe</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Expectativas:</h3>
+                </div>
+                <ul class="card-list">
+                    <li>Promoção em 1 ano</li>
+                    <li>Maior flexibilidade</li>
+                    <li>Mais reconhecimento</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <h3>Valores:</h3>
+                </div>
+                <ul class="card-list">
+                    <li>Transparência</li>
+                    <li>Proatividade</li>
+                    <li>Ambição</li>
+                    <li>Inovação</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="actions-footer">
+            <button class="btn-edit" onclick="window.location.href='edit-persona.html'">Editar Persona</button>
+        </div>
+
+    </main>
+
+</body>
+</html>

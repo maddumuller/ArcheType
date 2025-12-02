@@ -6,10 +6,21 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-input{
+input, textarea{
     transition: all 0.2s ease-in-out;
 }
-input:focus{
+
+.form-group input, textarea{
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0;
+    background-color: #d1d1d1;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.25);
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus, textarea:focus{
     transform: scale(1.05);
 }
 button{
@@ -18,6 +29,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 button:hover{
     transform: scale(1.05) translateY(-10px);

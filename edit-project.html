@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Archetype - Editar Projeto</title>
+  <link rel="stylesheet" href="src/styles/style.css">
+  <link rel="stylesheet" href="src/styles/create-edit-project.css">
+</head>
+<body>
+  <header>
+    <div class="left corner">
+      <a href="projects.html"><img src="src/components/images/logo.png" style="height:70px; cursor:pointer;"></a>
+    </div>
+    <div class="right corner">
+      <button class="nav-bar-button" id="btnContact">Contate-nos</button>
+      <a href="#"><img src="src/components/images/user.png" style="height:80px;"></a>
+    </div>
+  </header>
+
+  <div class="main">
+    <div style="width: 100%; display: flex;">
+        <h1 style="color: #193E4E;">Editar Projeto</h1>
+    </div>
+
+    <form id="formProjeto" action="" style="width: 100%;">
+      <div class="form-group">
+        <h1>Nome:*</h1>
+        <input type="text" placeholder="Insira o Nome" required>
+      </div>
+      <div class="form-group">
+        <h1>Descrição:</h1>
+        <textarea placeholder="Insira a Descrição" style="height: 100px; width: 100%; resize: none;" required></textarea>
+      </div>
+
+      <div class="form-group" style="margin-top:20px;">
+        <h1>Convidar Participante:</h1>
+        <div class="input-convite">
+          <input type="email" id="emailConvidado" placeholder="Insira o email do convidado" style="width:30%;">
+          <button type="button" id="btnConvidar">Convidar</button>
+        </div>
+      </div>
+
+      <div class="lista-convidados" id="listaConvidados"></div>
+    </form>
+
+    <button class="call-action-button" style="width: 100%;" onclick="window.location.href='projects.html'">Salvar</button>
+  </div>
+
+  <!-- Script colocado ANTES do </body> para garantir DOM pronto -->
+  <script>
+    (function(){
+      const nomesAleatorios = [
+        "Alexandre Silva",
+        "Beatriz Ferreira",
+        "Carlos Alberto",
+        "Daniela Andrade",
+        "Eduardo Ramos",
+        "Fernanda Monteiro",
+        "Gabriel Costa",
+        "Helena Oliveira"
+      ];
+
+      // Seletores
+      const btnConvidar = document.getElementById("btnConvidar");
+      const inputEmail = document.getElementById("emailConvidado");
+      const listaConvidados = document.getElementById("listaConvidados");
+      const form = document.getElementById("formProjeto");
+
+      // Impede submissão do formulário por Enter acidental
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+      });
+
+      // Função utilitária de validação simples de email
+      function validarEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      btnConvidar.addEventListener("click", function(event) {
+        event.preventDefault(); // redundante, mas seguro
+
+        const email = inputEmail.value.trim();
+        if (!email) {
+          alert("Digite um email.");
+          return;
+        }
+        if (!validarEmail(email)) {
+          alert("Email inválido.");
+          return;
+        }
+
+        // Nome aleatório
+        const nome = nomesAleatorios[Math.floor(Math.random() * nomesAleatorios.length)];
+
+        // Criar card
+        const card = document.createElement("div");
+        card.className = "card-convidado";
+        card.innerHTML = `
+          <div style="width: 100%; display: flex; justify-content: right;">
+            <button class="remove-card" aria-label="Remover convidado">X</button>
+          </div>
+          <div class="dados">
+            <h2>${nome}</h2>
+            <p>${email}</p>
+          </div>
+        `;
+
+        // Remover card ao clicar no X
+        const btnRemover = card.querySelector(".remove-card");
+        btnRemover.addEventListener("click", function(){
+          card.remove();
+        });
+
+        // Adicionar card
+        listaConvidados.appendChild(card);
+
+        // Limpar input e focar
+        inputEmail.value = "";
+        inputEmail.focus();
+      });
+
+      // --- DEBUG helpers opcional (descomente se quiser ver no console) ---
+      // console.log("Script carregado. btnConvidar:", !!btnConvidar, "inputEmail:", !!inputEmail, "listaConvidados:", !!listaConvidados);
+    })();
+  </script>
+</body>
+</html>

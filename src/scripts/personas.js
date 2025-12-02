@@ -23,16 +23,18 @@ function carregarPersonas() {
 
     // primeiro card: criar persona
     grid.innerHTML = `
-        <div class="card criar">
+        <div class="card criar" onclick="window.location.href='create-persona.html'">
             <img src="src/components/images/add-persona.png" alt="add icon" class="plus">
             <p>Criar Nova Persona</p>
         </div>
     `;
 
     // adiciona todos os cards
-    personas.forEach(p => {
+    personas.forEach((p, index) => { 
+        
+        // MUDANÇA 2: Adicione o onclick="abrirPersona(${index})" na div
         const card = `
-            <div class="card">
+            <div class="card" onclick="abrirPersona(${index})" style="cursor: pointer;">
                 <div class="circle"></div>
                 <h3>${p.nome}</h3>
                 <p class="sub">${p.desc}</p>
@@ -44,3 +46,15 @@ function carregarPersonas() {
 
 // inicializa
 carregarPersonas();
+
+
+function abrirPersona(index) {
+    // Pega os dados da persona 
+    const persona = personas[index];
+    
+    // Salva no navegador para a próxima tela ler
+    localStorage.setItem('personaAtiva', JSON.stringify(persona));
+    
+    // Redireciona
+    window.location.href = 'infos-persona.html';
+}
