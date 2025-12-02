@@ -23,7 +23,7 @@ function carregarPersonas() {
 
     // primeiro card: criar persona
     grid.innerHTML = `
-        <div class="card criar">
+        <div class="card criar" onclick="window.location.href='create-persona.html'">
             <img src="src/components/images/add-persona.png" alt="add icon" class="plus">
             <p>Criar Nova Persona</p>
         </div>

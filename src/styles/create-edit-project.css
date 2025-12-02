@@ -1,0 +1,96 @@
+.main{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.form{
+    width: 100%;
+}
+.remove-card {
+    content: url('../components/images/Vector.png');
+}
+
+.form-group h1{
+    margin-bottom: 0px;
+    font-size: medium;
+    width: 100%;
+    color: #193E4E;
+}
+
+.form-group input{
+    width: 100%;
+}
+
+.input-convite{
+    display: flex;
+    flex-direction: row;
+}
+
+.input-convite input{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-convite button{
+    font-weight: 600;
+    background: #efefef;
+    color: #193E4E;
+    border: solid #193E4E 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.lista-convidados {
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    height: 200px;
+    background: #d1d1d1;
+    border-radius: 15px;
+
+    display: grid;
+    grid-auto-flow: column;               /* expande para a direita */
+    grid-template-rows: repeat(2, max-content); /* 2 linhas fixas */
+    
+    column-gap: 15px;    /* gap horizontal fixo */
+    row-gap: 15px;       /* gap vertical fixo */
+
+    overflow-x: auto;    /* scroll horizontal */
+    overflow-y: hidden;  /* evita scroll vertical */
+    white-space: nowrap; /* evita comportamentos estranhos */
+}
+
+.card-convidado{
+    background: #efefef;
+    display: flex;
+    border-radius: 15px;
+    width: 250px;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.card-convidado button{
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    font-size: 1px;
+    background-image: url(../components/images/Vector.png);
+    border: 0;
+    background-size: cover;
+}
+
+.card-convidado .dados{
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-convidado .dados h2{
+    margin-bottom: -20px;
+}

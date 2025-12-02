@@ -1,0 +1,10 @@
+.form-group h1{
+    margin-bottom: 0px;
+    font-size: medium;
+    width: 100%;
+    color: #193E4E;
+}
+
+.form-group input{
+    width: 100%;
+}

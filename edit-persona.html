@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archetype - Editar Persona</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/create-edit-personas.css">
+</head>
+<body>
+    <header>
+    <div class="left corner">
+      <a href="projects.html"><img src="src/components/images/logo.png" style="height:70px; cursor:pointer;"></a>
+    </div>
+    <div class="right corner">
+      <button class="nav-bar-button" id="btnContact">Contate-nos</button>
+      <a href="#"><img src="src/components/images/user.png" style="height:80px;"></a>
+    </div>
+  </header>
+  <div class="main" style="padding: 100px;">
+    <h1 style="color: #193e4e;">Editar Persona</h1>
+    <div class="fileira" style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; padding: 50px; align-items: center;">
+            <img src="src/components/images/Frame 18.png" alt="" style="width: 200px;">
+            <a href="#" style="color: #2B7483; font-weight: 800;">Alterar Imagem</a>
+        </div>
+        <div style="display: flex; flex-direction: column; width: 100%;">
+            <div style="height: 50%; display: flex; flex-direction: row; gap: 30px;">
+                <div class="form-group" style="width: 50%;">
+                    <h1>Nome:*</h1>
+                    <input type="text" placeholder="Insira o Nome" required>
+                </div>
+                <div class="form-group" style="width: 10%;">
+                    <h1>Idade:</h1>
+                    <input type="number" placeholder="Insira a idade" required>
+                </div>
+                <div class="form-group" style="width: 40%;">
+                    <h1>Genero:</h1>
+                    <input type="number" placeholder="Insira o gênero" required>
+                </div>
+            </div>
+            <div class="form-group" style="width: 100%; height: 50%; margin-top: -70px;">
+                <h1>Descrição:</h1>
+                <textarea placeholder="Insira a Descrição" style="height: 100%; width: 100%; resize: none;" required></textarea>
+            </div>
+        </div>
+    </div>
+    <div style="height: 100%; display: flex; flex-direction: column;">
+        <div class="fileira" style="display: flex; flex-direction: row; justify-content: space-between; gap: 30px;">
+            <div class="form-group" style="width: 33%; height: 150%;">
+                <h1>Objetivos:</h1>
+                <textarea placeholder="Insira os Objetivos" style="height: 130px; width: 100%; resize: none;" required></textarea>
+            </div>
+            <div class="form-group" style="width: 33%; height: 150%;">
+                <h1>Frustrações:</h1>
+                <textarea placeholder="Insira as Frustrações" style="height: 130px; width: 100%; resize: none;" required></textarea>
+            </div>
+            <div class="form-group" style="width: 33%; height: 150%;">
+                <h1>Opiniões Gerais:</h1>
+                <textarea placeholder="Insira as Opiniões" style="height: 130px; width: 100%; resize: none;" required></textarea>
+            </div>
+        </div>
+        <div class="fileira" style="display: flex; flex-direction: row; justify-content: space-between; gap: 30px; align-items: center;">
+            <div class="form-group" style="width: 33%; height: 150%;">
+                <h1>Expectativas:</h1>
+                <textarea placeholder="Insira os Objetivos" style="height: 130px; width: 100%; resize: none;" required></textarea>
+            </div>
+            <div class="form-group" style="width: 33%; height: 150%;">
+                <h1>Valores:</h1>
+                <textarea placeholder="Insira as Frustrações" style="height: 130px; width: 100%; resize: none;" required></textarea>
+            </div>
+            <div style="height: 100%; width: 33%; display: flex; flex-direction: column; gap: 10px; align-items: end;">
+                <button class="call-action-button" onclick="window.location.href='personas.html'" style="width: 100%; height: 33%;">Salvar</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
